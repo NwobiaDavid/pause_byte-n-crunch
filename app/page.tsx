@@ -48,17 +48,20 @@ export default function Home() {
     <main>
      <div className="h-screen flex justify-center items-center overflow-hidden flex-col w-screen">
       <div className=" border relative w-full flex bg-orange-300 justify-center items-center h-full " >
+
         <div className=" absolute w-[95%] h-[95%] " >
-          <Image className=" blur-sm  " src={"/bg.jpg"} fill alt="background image" />
+          <Image className=" blur-sm object-cover " src={"/bg.jpg"} fill alt="background image" />
         </div>
+
         <div className="z-10 text-white flex flex-col justify-center items-center  ">
-          <h1 className=" xl:text-3xl font-semibold " >
-            Currently byte&crunch is temporally paused, but we will be back soon
+          <h1 className=" xl:text-3xl text-center text-lg md:text-xl font-semibold " >
+            Currently Byte&Crunch is temporally paused, but we will be back soon
           </h1>
-          <div className=" mt-10 text-7xl text-center  " >
-          {timeLeft.days && `${timeLeft.days} days`} {timeLeft.hours && `${timeLeft.hours} hours`} {timeLeft.minutes && `${timeLeft.minutes} minutes`} {timeLeft.seconds && `${timeLeft.seconds} seconds`}
-              </div>
+          <div className=" mt-10 lg:text-4xl md:text-2xl text-xl xl:text-7xl text-center  " >
+            {timeLeft.days && `${timeLeft.days} days`} {timeLeft.hours && `${timeLeft.hours} hours`} {timeLeft.minutes && `${timeLeft.minutes} minutes`} {timeLeft.seconds && `${timeLeft.seconds} seconds`}
+          </div>
         </div>
+
       </div>
      </div>
     </main>
